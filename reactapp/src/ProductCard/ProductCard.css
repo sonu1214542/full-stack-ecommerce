@@ -1,0 +1,88 @@
+.card {
+  width: auto;
+  max-width: 190px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  margin: 0.8vw;
+  display: inline-flexbox;
+  height: fit-content;
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.name {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1vw;
+}
+
+.price {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #f4f468;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .price {
+  animation: vibrate 0.3s ease 2; /* Apply the vibration effect animation on hover */
+}
+
+.add-to-cart-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px); /* Move left */
+  }
+  50% {
+    transform: translateX(2px); /* Move right */
+  }
+  75% {
+    transform: translateX(-2px); /* Move left */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* @media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+  .price{
+    font-weight: 2.5vw;
+  }
+  .name{
+    font-weight: 2.5vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 30%;
+  }
+} */
